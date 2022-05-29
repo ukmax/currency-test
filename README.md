@@ -3,7 +3,7 @@
 Clone the repository, then install the requirements and start the web server.
 
     $ pip install -r requirements.txt
-    $ uvicorn app:app --reload
+    $ uvicorn main:app --reload
 
 ## API endpoints
 
