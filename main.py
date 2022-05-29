@@ -35,9 +35,9 @@ def get_rate(currency: str, date: str):
         print("PRINT e= ", e)
         raise HTTPException(status_code=404, detail=f"{e} not found")
     result = {
-        "currency": "currency",
-        "date": "date",
-        "rate": "rate"
+        "currency": currency,
+        "date": date,
+        "rate": rate
     }
     return result
 
@@ -45,10 +45,10 @@ def get_rate(currency: str, date: str):
 @app.get("/help")
 def get_help():
     msg = {
-        "message": "Возвращает курс валюты currency на дату date",
+        "message": "Return currency rate on date",
         "request pattern": "GET /rate?currency=var1&date=var2",
         "currency list": "USD, EUR, CNY",
-        "valid dates": "Имеются данные только за период с 2022-04-25 по 2022-04-29",
-        "date format": "Формат даты YYYY-MM-DD"
+        "valid dates": "From 2022-04-25 to 2022-04-29",
+        "date format": "YYYY-MM-DD"
     }
     return msg
