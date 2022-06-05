@@ -18,6 +18,7 @@ Clone the repository, then install the requirements and start the web server.
 
 **Response**
 
+
 ```
 {
    "currency":"currency",
